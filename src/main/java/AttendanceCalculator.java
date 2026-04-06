@@ -47,22 +47,25 @@ public class AttendanceCalculator {
 
     /**
      * Calculates the attendance percentage.
+     * Changed to 'public' so JUnit tests can access it.
      */
-    private static double calculateAttendance(int totalClasses, int attendedClasses) {
+    public static double calculateAttendance(int totalClasses, int attendedClasses) {
         return ((double) attendedClasses / totalClasses) * 100;
     }
 
     /**
      * Checks if the student meets the minimum attendance required for exams.
+     * Changed to 'public' so JUnit tests can access it.
      */
-    private static boolean checkEligibility(double percentage) {
+    public static boolean checkEligibility(double percentage) {
         return percentage >= ELIGIBILITY_THRESHOLD;
     }
 
     /**
      * Returns a warning status based on the attendance percentage.
+     * Changed to 'public' so JUnit tests can access it.
      */
-    private static String getWarningStatus(double percentage) {
+    public static String getWarningStatus(double percentage) {
         if (percentage >= WARNING_THRESHOLD) {
             return "Safe - Good Attendance.";
         } else if (percentage >= ELIGIBILITY_THRESHOLD) {
